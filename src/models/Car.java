@@ -1,6 +1,6 @@
 package models;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle implements Tuningable{
     private int numberOfDoors;
 
 
@@ -20,7 +20,12 @@ public class Car extends Vehicle{
     @Override
     public String opis()
     {
-        System.out.println("Model: "+ this.getModel() +" Prędkość: "+ this.getSpeed()+" Ilość drzwi: "+this.numberOfDoors);
+        System.out.println("Model: "+ this.getModel() +" Prędkość: "+ this.getSpeed() + " Ilość drzwi: "+this.numberOfDoors);
         return "";
+    }
+
+    @Override
+    public void increaseSpeed(int increaseSpeed) {
+        setSpeed(setSpeed()+increaseSpeed);
     }
 }

@@ -13,5 +13,6 @@ public class App {
         {
             System.out.println(items[i]);
         }
+        samochod1.increaseSpeed(20);
     }
 }
